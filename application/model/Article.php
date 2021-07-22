@@ -13,7 +13,7 @@ class Article extends Model
     }
     public function find($id)
     {
-        $query="SELECT *,(SELECT `name` categories WHERE `categories`.`id` =    `articles`.`cat_id`) as `category` FROM `articles` WHERE `id` = ?";
+        $query="SELECT *,(SELECT `name` FROM categories WHERE `categories`.`id` =    `articles`.`cat_id`) as `category` FROM `articles` WHERE `id` = ?";
         $result=$this->query($query,[$id])->fetch();
         $this->closeConnection();
         return $result;

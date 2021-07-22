@@ -10,7 +10,7 @@
 <body>
 <section id="app">
     <nav class="navbar navbar-expand-lg navbar-dark  bg-red">
-        <a class="navbar-brand" href="index.html">MVC tutorial panel</a>
+        <a class="navbar-brand" href="<?= $this->url('home') ?>">MVC tutorial panel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,10 +24,10 @@
                         <a href="index.html">panel</a>
                     </section>
                     <section class="sidebar-link">
-                        <a href="category/index.html">category</a>
+                        <a href="<?= $this->url('category') ?>">category</a>
                     </section>
                     <section class="sidebar-link">
-                        <a href="article/index.html">article</a>
+                        <a href="<?= $this->url('article') ?>">article</a>
                     </section>
 
                 </section>

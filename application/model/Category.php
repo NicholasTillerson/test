@@ -15,14 +15,17 @@ class Category extends Model
     }
     public function articles($cat_id)
     {
-        $query="SELECT * FROM `categories` WHERE `cat_id`= ?;";
+        $query="SELECT * FROM `articles` WHERE `cat_id`= ?;";
         $result=$this->query($query,[$cat_id])->fetchAll();
         $this->closeConnection();
         return $result;
     }
     public function find($id)
     {
-
+        $query = "SELECT * FROM `categories` WHERE `id` = ?";
+        $result = $this->query($query,[$id])->fetch();
+        $this->closeConnection();
+        return $result;
     }
     public function insert($values)
     {
@@ -39,7 +42,7 @@ class Category extends Model
     public function delete($id)
     {
         $query="DELETE FROM `categories` WHERE `id` = ? ;";
-        $this->execute($query);
+        $this->execute($query,[$id]);
         $this->closeConnection();
     }
 }

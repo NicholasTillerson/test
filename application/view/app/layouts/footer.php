@@ -1,5 +1,5 @@
 </section>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="<?= $this->asset('js/jquery.min.js') ?>"></script>
+<script src="<?= $this->asset('js/bootstrap.min.js') ?>"></script>
 </body>
 </html>
